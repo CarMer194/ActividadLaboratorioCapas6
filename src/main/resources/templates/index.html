@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymealeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insertar Estudiante</title>
+</head>
+<body>
+<h1>Insertar Estudiante</h1><br>
+<form th:action="@{/agregarEstudiante}" th:object="${estudiante}" method="post">
+<label>Nombre: </label><input type="text" th:field="${estudiante.nombre}"><br>
+<label>Apellido: </label><input type="text" th:field="${estudiante.apellido}"><br>
+<label>Carne: </label><input type="text" th:field="${estudiante.carne}"><br>
+<label>Carrera: </label><input type="text" th:field="${estudiante.carrera}"><br>
+
+<input type="submit" value="Agregar Estudiante">
+</form>
+<br>
+<a href="/listado">Listado</a>
+
+</body>
+</html>
